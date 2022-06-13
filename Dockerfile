@@ -6,8 +6,7 @@ COPY pom.xml /opt/
 COPY src /opt/src/
 WORKDIR /opt
 RUN mvn -f /opt/pom.xml clean package
-COPY target/*.jar /opt/app.jar
-ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
+
 
 #
 # Package stage
